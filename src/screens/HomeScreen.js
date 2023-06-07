@@ -170,7 +170,7 @@ useEffect(()=>{
                     <Text style ={styles.text4}> Around you</Text>
 
                     <View style ={{alignItems:"center",justifyContent:"center"}}>
-                       <MapView
+                    {/**    <MapView
                             ref = {_map}
                             provider ={PROVIDER_GOOGLE}
                             style = {styles.map}
@@ -180,20 +180,21 @@ useEffect(()=>{
                             initialRegion = {{...carsAround[0],latitudeDelta:0.008,longitudeDelta:0.008}}
                            
                         >
-                            {carsAround.map((item,index)=>
-                            <MapView.Marker coordinate = {item} key= {index.toString()}>
+                       {carsAround.map((item,index)=>
+                           <MapView.Marker coordinate = {item} key= {index.toString()}>
                                 <Image 
                                     source = {require('../../assets/carMarker.png')}
                                     style ={styles.carsAround}
                                     resizeMode = "cover"
-                                />
-                            </MapView.Marker>
+                         /> 
+                          </MapView.Marker>
+                          
                             
                             )
 
                             }
 
-                       </MapView>         
+                        </MapView>   */}   
                     </View>
             </ScrollView>
             <StatusBar style ="light" backgroundColor = "#2058c0" translucent ={true} />

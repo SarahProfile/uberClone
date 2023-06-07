@@ -1,21 +1,27 @@
-import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
-import HomeScreen from './src/screens/HomeScreen'
+import { StyleSheet, Text, View,Dimensions } from 'react-native'
+import { OriginContextProvider,DestinationContextProvider } from './src/contexts/contexts'
+import RoootNavigator from './src/navigations/RootNavigator'
+
+
 const App = () => {
   return (
-    <View>
-     <HomeScreen/>
-    </View>
+  <DestinationContextProvider>
+    <OriginContextProvider>
+        <RoootNavigator />
+    </OriginContextProvider>
+   </DestinationContextProvider>
+   
   )
 }
 
-
 export default App
 
-
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
 
 container:{
   flex:1
 }
+
+
 })
